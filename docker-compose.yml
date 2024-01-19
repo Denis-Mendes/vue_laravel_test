@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: laravel_mysql
+    environment:
+      MYSQL_DATABASE: vue_laravel
+      MYSQL_ROOT_PASSWORD: senha123
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
